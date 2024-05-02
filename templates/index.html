@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICCOLO</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Piccolo</h1>
+        </div>
+        <div class="form-container">
+            <form id="long_url_form" method="POST" action={{ url_for('index') }}>
+				<input type="text" id="urlInput" placeholder="Enter your URL" name="long_url">
+				
+		</form>
+            <div class="button-container">
+                    <button>Generate QR Code</button>
+                    <button type="submit" form="long_url_form">Pico</button>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
