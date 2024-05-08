@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 import random
 import string
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, send_file
 from pymongo import mongo_client
+from bson.binary import Binary
+import qrcode
+import base64
 
 app = Flask(__name__)
 client = mongo_client.MongoClient()
@@ -19,17 +22,24 @@ def generate_url(length=6):
 def index():
     if request.method == 'POST':
         long_url = request.form['long_url']
+        if long_url=='':
+            return render_template('index.html')
         short_url = generate_url()
         # add check to see if the generated short_url is
         # not already in the database
+        result_url = f"{request.url_root}{short_url}"
+        long_url = request.form['long_url']
+        img = qrcode.make(long_url)
+        img_file = "static/images/qrcode.png"
+        bin_img = base64.b64encode(img).decode('utf-8')
         try:
-            db.pico.insert_one({'_id': short_url, 'long_url': long_url})
+            db.pico.insert_one({'_id': short_url, 'long_url': long_url, 'qrcode': bin_img})
         except Exception as e:
             print(e)
         # return f"Pico URL: {request.url_root}{short_url}"
-        result_url = f"{request.url_root}{short_url}"
+        img.save(img_file)
         return render_template("result.html",
-                               short_url=result_url, long_url=long_url)
+                               short_url=result_url, long_url=long_url, img=img_file)
     return render_template("index.html")
 
 

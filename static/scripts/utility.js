@@ -9,3 +9,12 @@ function copyURL() {
     // Copy the text inside the text field
     navigator.clipboard.writeText(copyText.value);
   }
+
+  function qrcode() {
+    if (document.getElementById('qrcode').style.display == 'block') {
+      document.getElementById('qrcode').style.display = 'none';
+    }
+    else {
+      document.getElementById('qrcode').style.display = 'block';
+    }
+}

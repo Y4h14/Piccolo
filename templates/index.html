@@ -15,8 +15,11 @@
 				<input type="text" id="urlInput" placeholder="Enter your URL" name="long_url">
 				
 		</form>
+        <div id="qrcode" style="display:none">
+            <img src="../{{ img }}" alt="QR">
+        </div>
             <div class="button-container">
-                    <button>Generate QR Code</button>
+                    <button type="submit" form="long_url_form" onclick="qrcode()">Generate QR Code</button>
                     <button type="submit" form="long_url_form">Pico</button>
                 </div>
         </div>
