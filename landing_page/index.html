@@ -3,40 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piccolo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Piccolo - URL Shortener</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Piccolo</h1>
-        <!-- Navigation menu can be added here if needed -->
+        <div class="container">
+            <h1>Piccolo</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link" href="https://github.com/Y4h14/Piccolo"><i class="fab fa-lg fa-github"></i></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section class="hero">
-        <h2>Shorten your URLs with ease</h2>
-        <p>Effortlessly shorten long URLs into manageable links. Simplify sharing and tracking.</p>
-        <a href="#" class="cta-button">Get Started</a>
+
+    <section id="hero" class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h2>Shrink Links, Share Swiftly, Scan Seamlessly!</h2>
+            <p>Welcome to Piccolo! Where long URLs disappear with a snap, and QR codes bring magic to every scan. Join us for effortless sharing and seamless scanning. Let's make communication a breeze, one link and QR code at a time</p>
+            <a href="#" class="btn btn-primary btn-lg">Try It Now</a>
+        </div>
     </section>
-    <section class="how-it-works">
-        <h2>How it Works</h2>
-        <!-- Step-by-step guide goes here -->
+
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Features</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Instant Shortening</h5>
+                            <p class="card-text">Long URLs vanish in an instant, replaced by sleek, compact links.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">QR Code Generation</h5>
+                            <p class="card-text">Effortlessly create QR codes for your shortened links, perfect for quick scanning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Customization Options (Coming Soon)</h5>
+                            <p class="card-text">Personalize your shortened URLs to match your brand or campaign.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Analytics Dashboard (Coming Soon)</h5>
+                            <p class="card-text">Gain insights into link performance with real-time analytics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="features">
-        <h2>Features</h2>
-        <!-- Key features list goes here -->
-        <p></p>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p class="text-center">Hey there! I'm Yahia, and I'm thrilled to welcome you to Piccolo. This project is part of my journey through the ALX software engineering program. What inspired me to create Piccolo? Well, I've always been curious about the magic behind seemingly simple things we use every day. So, I dove into the world of URL shortening and QR code generation to demystify the process. Turns out, it's not as complicated as I thought! Piccolo is my way of sharing that discovery with you, offering a fast, user-friendly solution to streamline your online sharing experience. Come along for the ride as we make digital communication a breeze!</p>
+            <div class="text-center mt-4">
+                <a href="https://twitter.com/TheYahiaNasr" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/yahia-nasr-6b0bb9151/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Y4h14" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </section>
-    <section class="testimonials">
-        <h2>Testimonials</h2>
-        <!-- Testimonials content goes here -->
-    </section>
-    <section class="cta">
-        <h2>Ready to shorten URLs?</h2>
-        <a href="#" class="cta-button">Start Now</a>
-    </section>
-    <footer>
-        <p>Contact us: contact@urlshortener.com</p>
-        <!-- Social media links can be added here -->
-        <p>&copy; 2024 URL Shortener. All rights reserved.</p>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p>&copy; 2024 Piccolo - URL Shortener</p>
+        </div>
     </footer>
+
+    <style>
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
