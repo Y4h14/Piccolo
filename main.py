@@ -1,14 +1,18 @@
 #!/usr/bin/python3
 import random
 import string
+import os
+from dotenv import load_dotenv, find_dotenv
 from flask import Flask, render_template, redirect, request, send_file
 from pymongo import mongo_client
-from bson.binary import Binary
 import qrcode
-import base64
 
 app = Flask(__name__)
-client = mongo_client.MongoClient()
+
+env_path = find_dotenv()
+load_dotenv(env_path)
+
+client = mongo_client.MongoClient(os.getenv("DB_CONNECT"))
 db = client.pico
 
 
@@ -31,9 +35,8 @@ def index():
         long_url = request.form['long_url']
         img = qrcode.make(long_url)
         img_file = "static/images/qrcode.png"
-        bin_img = base64.b64encode(img).decode('utf-8')
         try:
-            db.pico.insert_one({'_id': short_url, 'long_url': long_url, 'qrcode': bin_img})
+            db.pico.insert_one({'_id': short_url, 'long_url': long_url})
         except Exception as e:
             print(e)
         # return f"Pico URL: {request.url_root}{short_url}"
