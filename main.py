@@ -34,7 +34,8 @@ def index():
         result_url = f"{request.url_root}{short_url}"
         long_url = request.form['long_url']
         img = qrcode.make(long_url)
-        img_file = "static/images/qrcode.png"
+        # img_file = "static/images/qrcode.png"
+        img_file = "/tmp"
         try:
             db.pico.insert_one({'_id': short_url, 'long_url': long_url})
         except Exception as e:
