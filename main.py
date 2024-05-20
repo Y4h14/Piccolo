@@ -23,8 +23,15 @@ db = client.pico
 def generate_url(length=6):
     """
     generates a string that acts as the short url with a specified length
-    Args:
-        - length: the lenth of the random string genrated
+    Parameters
+    ----------
+    length : integer
+        The length of the short string to be created.
+ 
+    Returns
+    -------
+    string
+        a short random string.
     """
     chars = string.ascii_letters + string.digits
     short_url = "".join(random.choice(chars) for i in range(length))
@@ -43,6 +50,7 @@ def check_exists(field, value):
  
     Returns
     -------
+    boolean
         Ture if the value exists in the field
     """
     try:
@@ -87,6 +95,7 @@ def index():
         return render_template("result.html",
                                short_url=result_url,
                                long_url=long_url, img=img_file)
+    print(request.headers.get)
     return render_template("index.html")
 
 
