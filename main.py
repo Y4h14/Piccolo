@@ -34,10 +34,16 @@ def generate_url(length=6):
 def check_exists(field, value):
     """"
     checks if a specific value exists in the database
-    Args:
-        - field: the field in the database
-        - value: the value to look for
-    Returns: Ture if the value exists in the field
+    Parameters
+    ----------
+    field : string
+        The field name in the database.
+    value : string
+        The value to look for in the database.
+ 
+    Returns
+    -------
+        Ture if the value exists in the field
     """
     try:
         result = db.pico.find_one({field: value})
@@ -91,7 +97,7 @@ def redirect_url(short_url):
     if query:
         long_url = query['long_url']
     else:
-        return "URL not found", 402
+        return "URL not found", 404
     # put the long URL in the correct format
     if long_url:
         if long_url.find("http://") != 0 and long_url.find("https://") != 0:
@@ -99,7 +105,7 @@ def redirect_url(short_url):
 
         return redirect(long_url)
     else:
-        return "URL not found", 402
+        return "URL not found", 404
 
 
 if __name__ == '__main__':
