@@ -8,7 +8,7 @@ With Piccolo, you can shorten long URLs into concise, easy-to-share links, and g
 
 ## Installation
 
-Piccolo is available as a web application, accessible through any modern web browser. No installation or setup is required.
+Piccolo is available as a web application, accessible through any modern web browser. No installation or setup is required :)
 
 
 ## Usage 
