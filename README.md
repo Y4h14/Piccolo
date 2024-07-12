@@ -18,7 +18,6 @@ Piccolo is available as a web application, accessible through any modern web bro
 <!-- * [Customize: Optionally customize the shortened URL to make it more branded or memorable.]
 * [Analyze: Track the performance of your shortened links with built-in analytics.] -->
 
-## ScreenShots
 
 
 
