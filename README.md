@@ -1,4 +1,4 @@
-# Piccolo URL Shortener and QR Code Generator
+# Piccolo URL Shortener/QR Code Generator
 
 ## Description 
 
